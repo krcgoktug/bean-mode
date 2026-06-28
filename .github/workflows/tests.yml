@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run picker tests
+        run: python -m unittest discover -s tests -v
+      - name: Smoke-run the CLI
+        run: |
+          python bean_mode.py --mood focused --hour 9 --seed 0
+          python bean_mode.py --mood studying --hour 22 --json --seed 0
