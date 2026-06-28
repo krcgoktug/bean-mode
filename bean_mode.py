@@ -101,6 +101,15 @@ _LIBRARY: list[Brew] = [
     Brew("Affogato (dessert)", "espresso shot + vanilla ice cream", 93, 36,
          "very fine", 1.0, "Eros Ramazzotti — Più bella cosa",
          "Reward, not breakfast."),
+    Brew("Flat white", "double ristretto + microfoam steamed milk", 92, 160,
+         "fine", 1.5, "Phoebe Bridgers — Punisher",
+         "Smaller than a latte, sharper than a cappuccino."),
+    Brew("Cortado", "double shot espresso + warm milk", 93, 75,
+         "very fine", 1.0, "Bad Bunny — Un Verano Sin Ti",
+         "Balanced and quick, the cafe regular's pick."),
+    Brew("Vietnamese phin", "robusta + condensed milk", 95, 200,
+         "medium-coarse", 5.0, "Khruangbin — Mordechai",
+         "Slow drip, sweet finish, no rush."),
 ]
 
 
